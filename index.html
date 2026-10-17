@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>謎解きヒント</title>
+
+<style>
+
+body{
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+    font-family:sans-serif;
+    background:#f5f5f5;
+    font-size:24px;
+    line-height:1.8;
+}
+
+h1{
+    text-align:center;
+    font-size:40px;
+}
+
+.hint-box{
+    background:white;
+    margin:30px 0;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2{
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+button{
+    width:100%;
+    padding:18px;
+    margin:8px 0;
+    border:none;
+    border-radius:10px;
+    background:#4a90e2;
+    color:white;
+    font-size:24px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#357abd;
+}
+
+.hint{
+    display:none;
+    margin-top:10px;
+    margin-bottom:15px;
+    padding:15px;
+    background:#fff8dc;
+    border-radius:10px;
+    font-size:24px;
+}
+
+@media (max-width:768px){
+
+    body{
+        font-size:28px;
+    }
+
+    h1{
+        font-size:44px;
+    }
+
+    h2{
+        font-size:36px;
+    }
+
+    button{
+        font-size:28px;
+        padding:22px;
+    }
+
+    .hint{
+        font-size:28px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>謎解きヒント</h1>
+
+<!-- ① -->
+<div class="hint-box">
+<h2>①の謎</h2>
+
+<button onclick="toggleHint('q1h1')">ヒント1</button>
+<div id="q1h1" class="hint">
+プロフィールに杏ちゃんの血液型、星座、趣味は何と書かれている？
+</div>
+
+<button onclick="toggleHint('q1h2')">ヒント2</button>
+<div id="q1h2" class="hint">
+プロフィールの項目と数字（と矢印）の対応をスマホにメモしてみよう。法則に気付くかも？
+</div>
+
+<button onclick="toggleHint('q1h3')">ヒント3</button>
+<div id="q1h3" class="hint">
+杏ちゃんのＭＢＴＩを法則に当てはめると？
+</div>
+
+</div>
+
+<!-- ② -->
+<div class="hint-box">
+<h2>②の謎</h2>
+
+<button onclick="toggleHint('q2h1')">ヒント1</button>
+<div id="q2h1" class="hint">
+星を重ねるために、同じ形・同じ大きさの二つの星を探そう。星の色は関係ないよ。
+</div>
+
+<button onclick="toggleHint('q2h2')">ヒント2</button>
+<div id="q2h2" class="hint">
+星を重ねた状態で、月が見えるようにCDジャケットの上にCDを置こう。
+</div>
+
+<button onclick="toggleHint('q2h3')">ヒント3</button>
+<div id="q2h3" class="hint">
+秒針、長針、短針の順に針が指す4桁の数字を入力しよう。
+</div>
+
+</div>
+
+<!-- ③ -->
+<div class="hint-box">
+<h2>③の謎</h2>
+
+<button onclick="toggleHint('q3h1')">ヒント1</button>
+<div id="q3h1" class="hint">
+文章の内容だけじゃなく、「言葉の中」にも注目してみよう。言葉の中に何かが隠れているかも？
+</div>
+
+<button onclick="toggleHint('q3h2')">ヒント2</button>
+<div id="q3h2" class="hint">
+「パピヨシ」はどこか1文字がおかしいよね？プロフィールの紙で杏ちゃんの好きな食べ物は何だった？
+</div>
+
+<button onclick="toggleHint('q3h3')">ヒント3</button>
+<div id="q3h3" class="hint">
+「シオン」「マスカット」「トレイン」「ゴハン」「タイトル」に注目してね！<br><br>
+そのまま読むだけではなくて、「シをン」「マス(を)カット」「ゴはン」のように、言葉を変化させてみよう。最後に残った文字を順番に読んでみて！
+</div>
+
+</div>
+
+<!-- ④ -->
+<div class="hint-box">
+<h2>④の謎</h2>
+
+<button onclick="toggleHint('q4h1')">ヒント1</button>
+<div id="q4h1" class="hint">
+歌詞の中に花言葉と同じものを探そう。
+</div>
+
+<button onclick="toggleHint('q4h2')">ヒント2</button>
+<div id="q4h2" class="hint">
+その花言葉のバラの色は何かな？
+</div>
+
+</div>
+
+<!-- ⑤ -->
+<div class="hint-box">
+<h2>⑤の謎 ※キレイに折ってね</h2>
+
+<button onclick="toggleHint('q5h1')">ヒント1</button>
+<div id="q5h1" class="hint">
+歌詞カードを見ると、スポットライトは「消えた」から「灯る」に、「遠くの歓声」は「近くの歓声」に変わっているよね。折り紙でこれらの言葉を探してみてね。
+</div>
+
+<button onclick="toggleHint('q5h2')">ヒント2</button>
+<div id="q5h2" class="hint">
+②と③は全、2、4、8、16、32と書いてあるよね。この並び見たことない？小学生や中学生の時に習ったよ。分からなかったら、折り紙に描いてあるものを検索してね。
+</div>
+
+<button onclick="toggleHint('q5h3')">ヒント3</button>
+<div id="q5h3" class="hint">
+現れた2色はカタカナと漢字で書かれているよ。
+</div>
+
+</div>
+
+<!-- 困ったとき -->
+<div class="hint-box">
+<h2>困ったときの謎</h2>
+
+<button onclick="toggleHint('help1')">ヒント</button>
+<div id="help1" class="hint">
+五十音表を色塗りするよ。
+</div>
+
+<button onclick="toggleHint('help2')">答えが分かった後のヒント</button>
+<div id="help2" class="hint">
+スマホで「スマホ ○○ 反転」と調べてみよう。
+</div>
+
+</div>
+
+<!-- ⑥ -->
+<div class="hint-box">
+<h2>⑥の謎</h2>
+
+<button onclick="toggleHint('q6h1')">法則のヒント1</button>
+<div id="q6h1" class="hint">
+数字→数字は何を表すかな。配達物の箱の中に数字が使われているものはないかな？
+</div>
+
+<button onclick="toggleHint('q6h2')">法則のヒント2</button>
+<div id="q6h2" class="hint">
+赤くて3本の太い線はどこかで見覚えがないかな？
+</div>
+
+<button onclick="toggleHint('q6h3')">法則のヒント3</button>
+<div id="q6h3" class="hint">
+爆弾のカウントダウンの数字を見てみよう。数字が棒で表されているね。棒の数とその数字の関係を見てみよう。
+</div>
+
+<button onclick="toggleHint('a1')">A'のヒント</button>
+<div id="a1" class="hint">
+Aと書かれた紙を見ると漢字の中に数字が隠れているね。
+</div>
+
+<button onclick="toggleHint('b1')">B'のヒント</button>
+<div id="b1" class="hint">
+Bと書かれた紙は「歌詞カード」と「バラの花言葉リスト」だね。バラの花言葉リストにはまだ使ってないところがあるよ。その使っていないところと、歌詞カードを見比べてみよう。
+</div>
+
+<button onclick="toggleHint('c1')">C'のヒント</button>
+<div id="c1" class="hint">
+Cと書かれた紙でできたものは何だったかな？できたものを数字に直すとどうなる？
+</div>
+
+</div>
+
+<script>
+
+function toggleHint(id){
+
+    const hint = document.getElementById(id);
+
+    if(hint.style.display === "block"){
+        hint.style.display = "none";
+    }else{
+        hint.style.display = "block";
+    }
+
+}
+
+</script>
+
+</body>
+</html>
